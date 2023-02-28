@@ -1,0 +1,128 @@
+*{
+    padding:0;
+    margin:0;
+}
+ 
+body{
+    background-size: no-repeat ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url(https://media.tenor.com/ZZULcFufOKgAAAAC/space-galaxy.gif);
+    overflow: hidden;
+}
+
+ h2{
+    position: absolute;
+    top: 00%;
+    left: 0%;
+    font-size:40px;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    background-color:white ;
+    font-family: 'Distant Galaxy', sans-serif;
+    padding: 5px;
+}
+
+.game h1{
+    font-family: 'Distant Galaxy', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    /* color:rgba(255, 255, 255, 0.166); */
+    background: linear-gradient(90deg, rgba(102, 102, 102, 0.652) , #555, #444, #333, #222, #111 , #000);
+    font-size:50px;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    cursor: none;
+    user-select: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: textGrad 15s linear infinite; 
+    background-size: 400%
+}
+
+@keyframes textGrad{
+    0%{ background-position: 400%;}
+    100%{ background-position: 0%}
+}
+
+.game{
+    width: 900px;
+    height: 650px;
+    
+    position: relative;
+}
+
+.ship{
+width: 300px;
+height: auto;
+position: absolute;
+top: 480px;
+left: 0px;
+z-index: 2;
+
+}
+.ship img{
+    width: 100%;
+    height: 100%;
+}
+
+.alien{
+    width: 300px;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    z-index: 1;
+}
+.alien img{
+    width: 250px;
+    height: 100%;
+}
+
+
+.missile{
+    width: 300px;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    top: 490px;
+    left: 0px;
+    z-index: 1;
+    animation: fire 0.5s linear 1 forwards
+}
+.missile img{
+    width: 100px;
+    height: 100%;
+}
+
+@keyframes fire {
+    0%{
+        top: 490px
+    }
+    100%{
+        top: 0px
+    }
+}
+
+
+
+.alienMove{
+    animation: moveAlien 3s linear infinite ;
+}
+
+@keyframes moveAlien {
+    0%{
+       top:-10px
+    }
+    100%{
+        top:480px
+    }
+}
+
+
